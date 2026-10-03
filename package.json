@@ -7,12 +7,27 @@
   "bin": {
     "jev-docs-mcp": "index.js"
   },
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "start": "node index.js",
     "test": "node test-client.mjs"
   },
-  "keywords": ["mcp", "jev", "typesafe"],
-  "license": "ISC",
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "jev", "typesafe", "cursor", "documentation"],
+  "author": "Mohit Sharma",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohit716/jev-docs-mcp.git"
+  },
+  "homepage": "https://github.com/mohit716/jev-docs-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/mohit716/jev-docs-mcp/issues"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.0",
     "zod": "^4.6.5"

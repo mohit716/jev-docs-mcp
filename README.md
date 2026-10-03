@@ -14,24 +14,18 @@ It loads the docs from `docs.typesafe.ai/llms.txt` and `docs.typesafe.ai/llms-fu
 
 ## Setup
 
-Requires Node.js 18 or newer.
-
-```bash
-git clone https://github.com/mohit716/jev-docs-mcp.git
-cd jev-docs-mcp
-npm install
-```
+Requires Node.js 18 or newer. Nothing to install: `npx` downloads and runs the package.
 
 ### Cursor
 
-Add this to `~/.cursor/mcp.json` (or `.cursor/mcp.json` in a project), using the absolute path to `index.js`:
+Add this to `~/.cursor/mcp.json` (or `.cursor/mcp.json` in a project):
 
 ```json
 {
   "mcpServers": {
     "jev-docs": {
-      "command": "node",
-      "args": ["/absolute/path/to/jev-docs-mcp/index.js"]
+      "command": "npx",
+      "args": ["-y", "jev-docs-mcp"]
     }
   }
 }
@@ -42,12 +36,19 @@ Then open **Cursor Settings → Tools & MCP** and make sure `jev-docs` is enable
 ### Claude Code
 
 ```bash
-claude mcp add jev-docs -- node /absolute/path/to/jev-docs-mcp/index.js
+claude mcp add jev-docs -- npx -y jev-docs-mcp
 ```
 
-## Testing
+### Any other MCP client
+
+Run `npx -y jev-docs-mcp` as a stdio server.
+
+## Development
 
 ```bash
+git clone https://github.com/mohit716/jev-docs-mcp.git
+cd jev-docs-mcp
+npm install
 npm test
 ```
 
